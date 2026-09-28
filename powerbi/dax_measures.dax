@@ -1,0 +1,130 @@
+// ============================================================================
+// POWER BI DAX MEASURES REPOSITORY
+// Project: Retail Inventory & Supply Chain Performance Analysis
+// Model Type: Star Schema
+// ============================================================================
+
+// ----------------------------------------------------------------------------
+// 1. FINANCIAL & SALES MEASURES
+// ----------------------------------------------------------------------------
+
+Total Sales = 
+SUM(fact_sales[sales_amount])
+
+Total COGS = 
+SUM(fact_sales[cost_amount])
+
+Total Gross Profit = 
+SUM(fact_sales[gross_profit])
+
+Gross Margin % = 
+DIVIDE([Total Gross Profit], [Total Sales], 0) * 100
+
+Total Units Sold = 
+SUM(fact_sales[quantity_sold])
+
+Average Order Value = 
+DIVIDE([Total Sales], DISTINCTCOUNT(fact_sales[sale_id]), 0)
+
+MoM Sales Growth % = 
+VAR CurrentMonthSales = [Total Sales]
+VAR PreviousMonthSales = CALCULATE([Total Sales], DATEADD(dim_date[date], -1, MONTH))
+RETURN
+DIVIDE(CurrentMonthSales - PreviousMonthSales, PreviousMonthSales, 0) * 100
+
+
+// ----------------------------------------------------------------------------
+// 2. INVENTORY & VALUATION MEASURES
+// ----------------------------------------------------------------------------
+
+Current Inventory Units = 
+SUM(fact_inventory[closing_stock])
+
+Average Inventory Units = 
+AVERAGE(fact_inventory[closing_stock])
+
+Inventory Valuation = 
+SUMX(fact_inventory, fact_inventory[closing_stock] * RELATED(dim_product[unit_cost]))
+
+Average Inventory Value = 
+AVERAGEX(fact_inventory, fact_inventory[closing_stock] * RELATED(dim_product[unit_cost]))
+
+Inventory Turnover = 
+DIVIDE([Total COGS], [Average Inventory Value], 0)
+
+Days of Inventory Outstanding (DIO) = 
+DIVIDE([Average Inventory Value], [Total COGS], 0) * 365
+
+Sell-Through Rate % = 
+VAR TotalUnitsAvailable = SUM(fact_inventory[opening_stock]) + SUM(fact_inventory[received_quantity])
+RETURN
+DIVIDE([Total Units Sold], TotalUnitsAvailable, 0) * 100
+
+
+// ----------------------------------------------------------------------------
+// 3. STOCKOUT & AVAILABILITY MEASURES
+// ----------------------------------------------------------------------------
+
+Total Stockout Events = 
+SUM(fact_inventory[stockout_flag])
+
+Total Inventory Observations = 
+COUNTROWS(fact_inventory)
+
+Stockout Rate % = 
+DIVIDE([Total Stockout Events], [Total Inventory Observations], 0) * 100
+
+Estimated Lost Sales Opportunity = 
+VAR AvgDailySales = DIVIDE([Total Sales], 365, 0)
+RETURN
+[Total Stockout Events] * AvgDailySales
+
+
+// ----------------------------------------------------------------------------
+// 4. SUPPLY CHAIN & SUPPLIER PERFORMANCE MEASURES
+// ----------------------------------------------------------------------------
+
+Total Purchase Orders = 
+DISTINCTCOUNT(fact_purchase[purchase_id])
+
+Total Ordered Units = 
+SUM(fact_purchase[quantity_ordered])
+
+Total Received Units = 
+SUM(fact_purchase[quantity_received])
+
+Supplier Fill Rate % = 
+DIVIDE([Total Received Units], [Total Ordered Units], 0) * 100
+
+On-Time Delivered Orders = 
+CALCULATE(
+    COUNTROWS(fact_purchase),
+    fact_purchase[actual_delivery_date] <= fact_purchase[expected_delivery_date]
+)
+
+On-Time Delivery Rate % = 
+DIVIDE([On-Time Delivered Orders], [Total Purchase Orders], 0) * 100
+
+Average Lead Time Days = 
+AVERAGE(fact_purchase[lead_time_days])
+
+
+// ----------------------------------------------------------------------------
+// 5. MANAGEMENT ACTION CENTER DYNAMIC RISK INDICATOR
+// ----------------------------------------------------------------------------
+
+Replenishment Risk Level = 
+VAR CurrentStockoutRate = [Stockout Rate %]
+VAR CurrentStock = [Current Inventory Units]
+VAR ReorderPt = AVERAGE(fact_inventory[reorder_point])
+RETURN
+IF(CurrentStockoutRate >= 5.0 || CurrentStock < ReorderPt, "CRITICAL",
+    IF(CurrentStock < ReorderPt * 1.5, "HIGH", "NORMAL")
+)
+
+Excess Stock Risk Level = 
+VAR DIO = [Days of Inventory Outstanding (DIO)]
+RETURN
+IF(DIO >= 120, "CRITICAL EXCESS",
+    IF(DIO >= 90, "HIGH EXCESS", "BALANCED")
+)

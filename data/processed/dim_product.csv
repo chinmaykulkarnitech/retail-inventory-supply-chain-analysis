@@ -1,0 +1,51 @@
+product_id,product_name,category,subcategory,brand,supplier_id,unit_cost,selling_price
+PRD-001,Pro Wireless Noise-Canceling Earbuds,Consumer Electronics,Audio,AudioTech,SUP-101,45.0,129.99
+PRD-002,UltraSlim 15-inch Laptop,Consumer Electronics,Computers,TechPro,SUP-101,450.0,899.99
+PRD-003,4K UHD 27-inch Ergonomic Monitor,Consumer Electronics,Computers,VisionMax,SUP-102,160.0,349.99
+PRD-004,Smart Fitness Watch Series 5,Consumer Electronics,Mobile,PulseGear,SUP-101,65.0,179.99
+PRD-005,Portable Bluetooth Speaker 20W,Consumer Electronics,Audio,AudioTech,SUP-101,22.0,59.99
+PRD-006,Ergonomic Wireless Mouse,General Merchandise,Accessories,TechPro,SUP-101,12.0,34.99
+PRD-007,Mechanical RGB Gaming Keyboard,Consumer Electronics,Accessories,TechPro,SUP-101,35.0,89.99
+PRD-008,7-in-1 USB-C Multiport Hub,Consumer Electronics,Accessories,TechPro,SUP-101,18.0,49.99
+PRD-009,1TB Portable External SSD,Consumer Electronics,Computers,VisionMax,SUP-102,55.0,119.99
+PRD-010,HD Webcam 1080p with Mic,Consumer Electronics,Accessories,VisionMax,SUP-101,20.0,49.99
+PRD-011,Classic Slim Fit Denim Jeans,Apparel,Menswear,DenimCo,SUP-103,18.0,59.99
+PRD-012,Premium Organic Cotton T-Shirt,Apparel,Menswear,BasicsPlus,SUP-103,5.0,24.99
+PRD-013,Fleece Zip-Up Hoodie,Apparel,Menswear,BasicsPlus,SUP-103,16.0,49.99
+PRD-014,Lightweight Performance Running Shoes,Apparel,Footwear,StrideRight,SUP-103,32.0,99.99
+PRD-015,Athletic Moisture-Wicking Shorts,Apparel,Menswear,StrideRight,SUP-103,10.0,29.99
+PRD-016,All-Weather Waterproof Rain Jacket,Apparel,Womenswear,OutdoorGear,SUP-103,38.0,119.99
+PRD-017,Merino Wool Thermal Socks (3-Pack),Apparel,Accessories,BasicsPlus,SUP-104,7.0,22.99
+PRD-018,Genuine Leather Dress Belt,Apparel,Accessories,DenimCo,SUP-103,12.0,34.99
+PRD-019,Wrinkle-Free Formal Oxford Shirt,General Merchandise,Menswear,DenimCo,SUP-104,20.0,54.99
+PRD-020,Insulated Winter Parka Coat,Apparel,Womenswear,OutdoorGear,SUP-104,75.0,199.99
+PRD-021,Digital Touchscreen Air Fryer 5.8Qt,Home & Kitchen,Small Appliances,KitchenChef,SUP-105,42.0,109.99
+PRD-022,Compact Espresso & Cappuccino Maker,Home & Kitchen,Small Appliances,KitchenChef,SUP-105,70.0,189.99
+PRD-023,10-Piece Non-Stick Cookware Set,Home & Kitchen,Cookware,KitchenChef,SUP-106,65.0,159.99
+PRD-024,High-Speed Countertop Blender 1200W,Home & Kitchen,Small Appliances,KitchenChef,SUP-106,35.0,89.99
+PRD-025,Smart Robot Vacuum Cleaner,Home & Kitchen,Small Appliances,CleanHome,SUP-106,110.0,269.99
+PRD-026,Ergonomic Memory Foam Bed Pillow,Home & Kitchen,Bedding,ComfortRest,SUP-105,15.0,44.99
+PRD-027,Double-Wall Stainless Water Bottle 32oz,Home & Kitchen,Cookware,ComfortRest,SUP-105,8.0,24.99
+PRD-028,Adjustable Dual-Motor Standing Desk,Home & Kitchen,Home Organization,CleanHome,SUP-106,180.0,399.99
+PRD-029,Japanese Steel 8-inch Chef Knife,Home & Kitchen,Cookware,KitchenChef,SUP-105,25.0,69.99
+PRD-030,Dimmable LED Architect Desk Lamp,Home & Kitchen,Home Organization,CleanHome,SUP-105,14.0,39.99
+PRD-031,Sonic Electric Toothbrush with 4 Heads,Health & Beauty,Personal Care,PureOral,SUP-108,22.0,64.99
+PRD-032,Gentle Hydrating Facial Cleanser 8oz,Health & Beauty,Skincare,GlowLab,SUP-107,6.0,18.99
+PRD-033,Broad Spectrum Sunscreen SPF 50,Health & Beauty,Skincare,GlowLab,SUP-108,7.0,21.99
+PRD-034,Vitamin C Brightening Facial Serum,Health & Beauty,Skincare,GlowLab,SUP-108,12.0,34.99
+PRD-035,Ionic Ceramic Hair Dryer 1875W,Health & Beauty,Personal Care,GlowLab,SUP-108,24.0,59.99
+PRD-036,Grass-Fed Whey Protein Powder 2lbs,General Merchandise,Supplements,NutriCore,SUP-107,18.0,42.99
+PRD-037,Ultrasonic Essential Oil Diffuser,Health & Beauty,Wellness,PureOral,SUP-108,11.0,29.99
+PRD-038,Deep Moisture Body Cream 16oz,Health & Beauty,Skincare,GlowLab,SUP-107,8.0,22.99
+PRD-039,Precision Waterproof Beard Trimmer,Health & Beauty,Personal Care,PureOral,SUP-108,19.0,49.99
+PRD-040,Non-Slip Extra Thick Yoga Mat 6mm,Health & Beauty,Wellness,NutriCore,SUP-107,10.0,29.99
+PRD-041,Organic Single-Origin Coffee Beans 1lb,Grocery & Pantry,Beverages,ArtisanRoast,SUP-110,6.0,16.99
+PRD-042,Cold-Pressed Extra Virgin Olive Oil 1L,Grocery & Pantry,Oils & Condiments,TuscanGold,SUP-110,7.5,19.99
+PRD-043,Organic Japanese Matcha Green Tea,Grocery & Pantry,Beverages,ArtisanRoast,SUP-109,9.0,24.99
+PRD-044,Raw Roasted Almonds & Cashews 16oz,Grocery & Pantry,Snacks,NatureSnack,SUP-109,5.0,13.99
+PRD-045,70% Dark Artisanal Chocolate Bar (5-Pack),Grocery & Pantry,Snacks,NatureSnack,SUP-109,6.0,17.99
+PRD-046,Pure Wildflower Raw Honey 24oz,Grocery & Pantry,Pantry Staples,TuscanGold,SUP-109,5.5,14.99
+PRD-047,Plant-Based High Protein Bars (12-Pack),Grocery & Pantry,Snacks,NatureSnack,SUP-110,11.0,27.99
+PRD-048,Unsweetened Organic Almond Milk 64oz,Grocery & Pantry,Beverages,ArtisanRoast,SUP-109,1.8,4.49
+PRD-049,Whole Grain Rolled Oats 32oz,Grocery & Pantry,Pantry Staples,NatureSnack,SUP-109,2.2,5.99
+PRD-050,Artisanal Italian Pasta Variety Pack 4-Pack,Grocery & Pantry,Pantry Staples,TuscanGold,SUP-109,4.0,11.99

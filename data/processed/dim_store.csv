@@ -1,0 +1,9 @@
+store_id,store_name,city,state,region,store_type,target_inventory_turnover
+STR-101,Metro Center Store,New York,NY,Northeast,Flagship,8.0
+STR-102,Harbor Place Store,Boston,MA,Northeast,Supercenter,6.5
+STR-103,Sun Valley Plaza,Miami,FL,South,Express,7.0
+STR-104,Peachtree Mall Store,Atlanta,GA,South,Mall Store,5.5
+STR-105,Windy City Supercenter,Chicago,IL,Midwest,Supercenter,6.0
+STR-106,Lakeshore Express,Minneapolis,MN,Midwest,Express,7.5
+STR-107,Pacific Center Store,Los Angeles,CA,West,Flagship,8.5
+STR-108,Emerald City Supercenter,Seattle,WA,West,Supercenter,6.2

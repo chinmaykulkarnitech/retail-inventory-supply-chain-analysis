@@ -1,0 +1,11 @@
+supplier_id,supplier_name,supplier_region,supplier_type,base_lead_time,base_fill_rate
+SUP-101,Apex Electronics Corp,East Asia,Manufacturer,10,0.95
+SUP-102,Global Tech Logistics,North America,Distributor,5,0.98
+SUP-103,Urban Style Apparel Inc,Southeast Asia,Manufacturer,14,0.9
+SUP-104,Premier Garments Ltd,North America,Wholesaler,4,0.96
+SUP-105,Culinary Home Goods,Europe,Manufacturer,12,0.92
+SUP-106,Comfort Living Co,North America,Distributor,6,0.97
+SUP-107,Vitality Wellness Labs,North America,Manufacturer,5,0.94
+SUP-108,Pure Glow Cosmetics,Europe,Manufacturer,8,0.93
+SUP-109,Organic Harvest Traders,South America,Importer,11,0.91
+SUP-110,Pantry Direct Distribution,North America,Distributor,3,0.99
