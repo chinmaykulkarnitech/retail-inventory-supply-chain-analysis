@@ -768,4 +768,4 @@ Additional project documentation:
 
 Built to demonstrate an end-to-end Data Analyst workflow using **SQL, Python, Pandas, SQLite, and Power BI**.
 
----
+---# retail-inventory-supply-chain-analysis
